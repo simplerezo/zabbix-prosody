@@ -4,8 +4,9 @@ Zabbix Template for Prosody using "internal" statistics / mod_munin / mod_measur
 Works with the very good docker image https://github.com/unclev/prosody-docker-extended
 
 # Installation
-1. Configure Prosody Server
-  - Enable modules measure_client_presence, measure_stanza_counts and munin (in prosody.cfg.lua file)
+1. Configure Prosody Server (editing **prosody.cfg.lua**)
+
+  - Enable modules measure_client_presence, measure_stanza_counts and munin
 ```
 modules_enabled = {
   [...]
@@ -14,14 +15,15 @@ modules_enabled = {
                 "munin";
 }
 ```
-  - Enable statistics (in prosody.cfg.lua file)
+
+  - Enable statistics
 ```
 -- Uncomment to enable statistics
 -- For more info see https://prosody.im/doc/statistics
 statistics = "internal"
 ```
 
-2. If you are using prosody-docker-extended, you need to update docker-compose.yml, adding the following line in the "ports:" section:
+2. If you are using prosody-docker-extended, you need to update **docker-compose.yml**, adding the following line in the "ports:" section:
 ```
           - "127.0.0.1:4949:4949"
 ```
