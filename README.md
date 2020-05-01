@@ -3,6 +3,8 @@ Zabbix Template for Prosody using "internal" statistics / mod_munin / mod_measur
 
 Works with the very good docker image https://github.com/unclev/prosody-docker-extended
 
+Listed here: https://share.zabbix.com/cat-app/misc/prosody-xmpp-server
+
 # Installation
 1. Configure Prosody Server (editing **prosody.cfg.lua**)
 
